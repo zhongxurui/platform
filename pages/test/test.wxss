@@ -1,0 +1,42 @@
+/* pages/test/test.wxss */
+.body {
+    width: 100%;
+    height: 700rpx;
+    /* border: 1px solid red; */
+    margin-top: 20%;
+}
+.numstyle {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    font-size: 40rpx;
+    color:  red;
+    text-align: center;
+    margin-top: 100rpx;
+}
+.showChoose {
+    width: 100%;
+    position: relative;
+    height: 200rpx;
+    margin: 0 auto;
+    margin-top: 100rpx;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showChoose view {
+    width: 200rpx;
+    height: 200rpx;
+    position: relative;
+    border: 3px solid greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showChoose view text {
+    font-size: 60rpx;
+    font-weight: 900;
+    color: red;
+    display: block;
+}

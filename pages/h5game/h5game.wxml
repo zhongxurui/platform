@@ -1,0 +1,4 @@
+ <web-view class = "web_view"
+src ="{{address}}" bindmessage="msgHandler"></web-view>    
+<!-- file:///Users/zhongxurui/gamemode/index.html -->
+<!-- <web-view src = "https://test.bjpengkai.cn/game002/index.html?openid=owUzW5bMasc7F7vOBEpRO1vFBFlw&id=2&key=eb677c6977df37e16e7b09255f7124ee"></web-view>  -->

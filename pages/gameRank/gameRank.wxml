@@ -1,0 +1,55 @@
+<scroll-view class='body' scroll-y enable-back-to-top>
+    <view class='Infotitle'>
+        <text>{{name}}今日排行榜</text>
+    </view>
+    <view class='uesrInfo'>
+        <view class='userInfo_header'>
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class='userInfo_info'>
+            <open-data type="userNickName" class="userInfo_name"></open-data>
+            <text class='paiming'>今日最高得分：{{playerScore}}</text>
+            <text class='paiming'>当前排名：{{personalrank}}</text>
+        </view>
+
+        <view class='gamebtn'>
+            <view class='tips' style='margin-left: 0rpx; width: 200rpx;'>
+                <image src='http://static.bjpengkai.cn/gamePK/index/gold.png'></image>
+                <text style='font-size: 28rpx'>{{integral}}</text>
+                <image src='http://static.bjpengkai.cn/gamePK/jifen/add.png'></image>
+            </view>
+            <view class='duihuan' catchtap='gotohapply'>
+                <text>兑换礼物</text>
+            </view>
+        </view>
+    </view>
+    <view class='listtop' style='margin-top: 20rpx;'>
+        <view style='width: 300rpx;'>
+            <text>今日排行</text>
+        </view>
+        <view style='width: 240rpx; text-align: center;'>
+            <text>得分</text>
+        </view>
+        <view style='width: 160rpx; text-align: right;'>
+            <text>预计奖励</text>
+        </view>
+    </view>
+    <scroll-view class='listrank' scroll-y bindscrolltolower="RefreshList">
+
+        <view class='rank' wx:for="{{ranklist}}" wx:key>
+            <view class='ranknum'>{{index+ 1}}</view>
+            <view class='rankheader'>
+                <image src='{{item.portrait}}'></image>
+            </view>
+            <view class='rankname'>
+                <text>{{item.wxnicheng}}</text>
+            </view>
+            <view class='rankname' style=' width: 180rpx; text-align: left;'>
+                <text>{{item["game" + id + "Score"]}}</text>
+            </view>
+            <view class='rankname' style=' width: 140rpx; text-align: center;'>
+                <text>{{item["forecast_income" + id]}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</scroll-view>

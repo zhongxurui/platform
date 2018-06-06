@@ -1,0 +1,708 @@
+/* pages/index.wxss */
+@import '../temp/temp.wxss';
+
+page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #5876f1;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gametitle {
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 50rpx;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center; */
+}
+
+.titlebanner {
+  width: 480rpx;
+  height: 60rpx;
+  position: relative;
+  background-image: url("https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/index/titlebanner.png");
+  background-size: 100% 100%;
+}
+
+.gametitle image {
+  display: block;
+  width: 54rpx;
+  height: 54rpx;
+  position: relative;
+  margin-left: 20rpx;
+}
+
+.today_tuijian {
+  width: 700rpx;
+  height: 500rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  padding-top: 15rpx;
+}
+
+.tuijian_banner {
+  width: 670rpx;
+  height: 300rpx;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.tuijian_banner image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.today_tuijian .stargame {
+  background-image: url('http://static.bjpengkai.cn/gamePK/index/stargame.png');
+  background-size: 100% 100%;
+  width: 442rpx;
+  height: 78rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  border-radius: 40rpx;
+}
+
+.today_tuijian .invitfriend {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  width: 442rpx;
+  height: 78rpx;
+  border-radius: 40rpx;
+  background-color: #c7b7e8;
+  text-align: center;
+}
+
+.today_tuijian .invitfriend text {
+  display: block;
+  color: white;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  font-weight: 350;
+}
+
+.tuijianimage {
+  background-image: url('http://static.bjpengkai.cn/gamePK/index/tuijian.png');
+  background-size: 100% 100%;
+  width: 118rpx;
+  height: 116rpx;
+  position: absolute;
+  top: 0;
+}
+
+.uesrInfo {
+  width: 98%;
+  height: 200rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uesrInfo .userInfo_header {
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.uesrInfo .userInfo_info {
+  width: 280rpx;
+  height: 160rpx;
+  position: relative;
+  padding: 10rpx;
+  padding-top: 20rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.uesrInfo .userInfo_info .userInfo_name {
+  color: white;
+  font-size: 35rpx;
+  font-weight: 600;
+  width: 160rpx;
+}
+
+.uesrInfo .userInfo_info .paiming {
+  width: 200rpx;
+  height: 40rpx;
+  position: relative;
+  display: block;
+  margin-top: 10rpx;
+  lighting-color: 40rpx;
+  color: white;
+  font-size: 22rpx;
+  font-weight: 300rpx;
+}
+
+.gameitem {
+  width: 200rpx;
+  height: 160rpx;
+  position: relative;
+  padding: 10rpx;
+  padding-left: 0;
+}
+
+.gamebtn {
+  width: 220rpx;
+  height: 180rpx;
+  position: relative;
+}
+
+.gameitem .gold_index {
+  width: 180rpx;
+  height: 65rpx;
+  position: relative;
+  margin: 0 auto;
+  /* margin-top: 10rpx; */
+  border-radius: 20rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameitem .gold_index image {
+  width: 42rpx;
+  height: 42rpx;
+  position: relative;
+}
+
+.gameitem .gold_index .gold {
+  display: block;
+  width: 100rpx;
+  height: 60rpx;
+  color: white;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  position: relative;
+  margin-left: 10rpx;
+  text-align: center;
+}
+
+.gameitem .gold_index .gold view {
+  width: 100%;
+  height: 30rpx;
+  position: relative;
+}
+
+.gameitem .gold_index .gold view text {
+  display: block;
+  position: relative;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 25rpx;
+}
+
+.gamebtn text {
+  font-size: 30rpx;
+  display: block;
+  line-height: 70rpx;
+}
+
+.gamebtn .duihuan {
+  /* background-image: url('http://static.bjpengkai.cn/gamePK/index/duihuan.png');
+    background-size: 100% 100%; */
+  width: 220rpx;
+  height: 70rpx;
+  position: relative;
+  text-align: center;
+  color: #a28222;
+  background-color: #ffdf47;
+  border-radius: 16rpx;
+  margin-top: 20rpx;
+}
+
+.gamebtn .tixian {
+  /* background-image: url('http://static.bjpengkai.cn/gamePK/index/tixian.png');
+    background-size: 100% 100%; */
+  width: 200rpx;
+  height: 70rpx;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: #3688c1;
+  background-color: #76d7ff;
+  border-radius: 20rpx;
+}
+
+.lunbo {
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.listrank {
+  width: 98%;
+  height: 610rpx;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.listtop {
+  margin-top: 10rpx;
+  width: 98%;
+  height: 80rpx;
+  position: relative;
+  border-radius: 10rpx 10rpx 0 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.listtop view {
+  text-align: center;
+  color: white;
+  font-size: 28rpx;
+}
+
+.listrank .rank {
+  width: 100%;
+  position: relative;
+  height: 80rpx;
+  margin-top: 5rpx;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listrank .rank .ranknum {
+  width: 80rpx;
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.listrank .rank .rankheader {
+  width: 65rpx;
+  height: 65rpx;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.listrank .rank .rankheader image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+}
+
+.listrank .rank .rankname {
+  width: 240rpx;
+  height: 80rpx;
+  position: relative;
+  padding-left: 20rpx;
+  text-align: left;
+  font-size: 30rpx;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listrank .rank .rankname text {
+  line-height: 80rpx;
+}
+
+.indexbottom {
+  width: 100%;
+  height: 130rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+
+.secretary {
+  width: 200rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 0;
+  top: 350rpx;
+}
+
+.secretary_image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  margin-top: -35rpx;
+  margin-left: 10rpx;
+  border: 3px solid white;
+  -webkit-animation-name: 'ripple'; /*动画属性名，也就是我们前面keyframes定义的动画名*/
+  -webkit-animation-duration: 1s; /*动画持续时间*/
+  -webkit-animation-iteration-count: infinite; /*定义循环资料，infinite为无限次*/
+  -webkit-animation-direction: alternate; /*定义动画方式*/
+}
+
+.secretary_image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.secretary_name {
+  width: 120rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -25rpx;
+  right: 0;
+  border: 2px solid white;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: #2484c1;
+  text-align: center;
+}
+
+.secretary_name text {
+  display: block;
+  line-height: 50rpx;
+  font-size: 22rpx;
+  color: white;
+  margin-left: 10rpx;
+}
+
+.secretary button {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.daypaihang {
+  width: 100%;
+  height: 100rpx;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
+  margin-top: 20rpx;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+.login_image {
+  width: 500rpx;
+  /* height: 500rpx; */
+  position: relative;
+  margin: 0 auto;
+  margin-top: 200rpx;
+}
+
+.login_image1 {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.login_image2 {
+  width: 367rpx;
+  height: 99rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  background: url("http://static.bjpengkai.cn/gamePK/index/login_text.png") center no-repeat;
+  background-size: cover;
+}
+
+.stargame {
+  position: relative;
+  width: 300rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  /* border: 1px solid red; */
+  background-color: #5876f1;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  color: white;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.stargame text {
+  display: block;
+  line-height: 70rpx;
+}
+
+.award_item {
+  width: 500rpx;
+  height: 700rpx;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -280rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  border: 3px solid #469be4;
+  z-index: 200;
+  padding: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.award_item .rule {
+  font-size: 25rpx;
+  color: #469be4;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.award_item .rule text {
+  display: block;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.allrule {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.allrule .rulebg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.rulebtn {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30rpx;
+  border: 2px solid black;
+}
+
+.tips {
+  width: 180rpx;
+  height: 70rpx;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+
+.tips image {
+  width: 42rpx;
+  height: 42rpx;
+  position: relative;
+}
+
+.tips text {
+  display: block;
+  color: white;
+  width: 110rpx;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.marquee_container {
+  height: 70rpx;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee_text {
+  display: block;
+  white-space: nowrap;
+  animation-name: around;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  color: gold;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  font-weight: 200;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes around {
+  from {
+    left: 110%;
+  }
+
+  to {
+    left: -110%;
+  }
+}
+
+.showtest {
+  margin-top: 20%;
+}
+
+.daoliu {
+  width: 600rpx;
+  height: 500rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300rpx;
+  margin-top: -300rpx;
+  /* border: 1px solid red; */
+  border-radius: 20rpx;
+  background: white;
+}
+
+.daoliu_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.daoliu_body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+
+.tishi {
+  position: relative;
+  color: red;
+  font-size: 45rpx;
+  margin: 0 auto;
+  margin-top: 25rpx;
+}
+
+.tishi text {
+  display: block;
+  text-align: center;
+}
+
+.daoliu .centent {
+  width: 90%;
+  /* height: 300rpx; */
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  /* border: 1px solid red; */
+}
+
+.daoliu .centent text {
+  color: #469be4;
+  text-align: center;
+  font-size: 38rpx;
+  display: block;
+}
+
+.centent_tips {
+  background-color: #469be4;
+  color: white;
+  /* display: block; */
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  height: 50rpx;
+  width: 400rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.duihuanButton {
+  position: relative;
+  width: 400rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  background-color: #469be4;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

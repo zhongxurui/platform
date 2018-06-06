@@ -1,0 +1,167 @@
+/* pages/shop/shop.wxss */
+page{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    background: grey;
+    position: relative;
+}
+#header{
+    width: 100%;
+    height: 100rpx;
+    background: #F6F8F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#header .header_item{
+    margin: 20rpx 10rpx;
+    width: 150rpx;
+    height: 60rpx;
+    background: #758CE7;
+    color: white;
+    text-align: center;
+    font-size: 26rpx;
+    line-height: 60rpx;
+    border-radius: 20rpx;
+    font-weight: 600;
+}
+#scrollWrp{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0rpx;
+    left: 0;
+}
+#scrollWrp .number{
+    width:100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    padding-left: 30rpx;
+    background: #E8E8E7;
+    position: relative;
+    font-weight: 400;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 100rpx;
+}
+#scrollWrp .number .look{
+    width: 160rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: white;
+    position: absolute;
+    right: 40rpx;
+    top: 16rpx;
+    background: #8D7AF0;
+    text-align: center;
+    border-radius: 10rpx;
+}
+#scrollWrp .scroll{
+    height: 100%;
+    width: 100%;
+    background: #E8E8E7;
+    z-index: 11;
+    overflow: hidden;
+}
+#scrollWrp .scroll .allItem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    align-content: space-around;
+    top: 180rpx;
+}
+#scrollWrp .scroll .scroll_item{
+    width: 320rpx;
+    height: 460rpx;
+    background: peru;
+    /* border: 10rpx solid transpare; */
+    margin-left: 38rpx;
+    margin-bottom: 40rpx;
+    text-align: center;
+}
+#scrollWrp .scroll .scroll_item image{
+    width: 320rpx;
+    height: 320rpx;
+}
+#scrollWrp .scroll .scroll_item .name{
+    background: white;
+    margin-top: -10rpx;
+    font-weight: 400;
+    font-size: 36rpx;
+    line-height: 80rpx;
+}
+#scrollWrp .scroll .scroll_item .value{
+    background: #AD7BE9;
+    margin-top: -10rpx;
+    font-weight: 400;
+    font-size: 40rpx;
+    line-height: 80rpx;
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+#tips {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10000001;
+}
+
+#tips .tips{
+    width: 500rpx;
+    height: 500rpx;
+    position: relative;
+    margin:0  auto;
+      margin-top: 50%;
+    top: -200rpx;  
+    background: white;
+    border: 10rpx solid black;
+    text-align: center;
+    border-radius: 20rpx;
+}
+#tips .tips .now{
+    font-size: 60rpx;
+    line-height: 140rpx;
+}
+#tips .tips .custom{
+    font-size: 50rpx;
+    line-height: 200rpx;
+}
+#tips .tips .wx{
+    font-size: 40rpx;
+    line-height: 60rpx;
+}
+#tips .tips .wx view{
+    font-size: 24rpx;
+    line-height: 40rpx;
+}
+.index {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.mengban {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 10000000;
+}

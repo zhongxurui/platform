@@ -1,0 +1,71 @@
+<!--pages/shop/shop.wxml-->
+
+<view class = "index">
+<view id="header">
+    <view class="header_item">全部</view>
+    <view class="header_item" style="background:#E1E1E1;color:black" catchtap='alert'>数码产品</view>
+    <view class="header_item" style="background:#E1E1E1;color:black" catchtap='alert'> 虚拟物品</view>
+    <view class="header_item" style="background:#E1E1E1;color:black" catchtap='alert'>日常生活</view>
+</view>
+<view id="scrollWrp">
+    <view class="number">
+        我的积分：{{integral}}
+        <view class="look" catchtap='duih'>兑换查看</view>
+    </view>
+    <scroll-view scroll-y class="scroll">
+        <view class="allItem">
+            <view class="scroll_item" catchtap='duihuan' data-num="800000">
+                <image src="http://static.bjpengkai.cn/gamePK/shop/iphone.JPG" />
+                <view class="name">iPhone</view>
+                <view class="value">800000</view>
+            </view>
+            <view class="scroll_item" catchtap='duihuan' data-num="8000">
+                <image src="http://static.bjpengkai.cn/gamePK/shop/cup.JPG" />
+                <view class="name">马克杯</view>
+                <view class="value">8000</view>
+            </view>
+            <view class="scroll_item" catchtap='duihuan' data-num="7500">
+                <image src="http://static.bjpengkai.cn/gamePK/shop/card50.JPG" />
+                <view class="name">50元移动卡</view>
+                <view class="value">7500</view>
+            </view>
+            <view class="scroll_item" catchtap='duihuan' data-num="7500">
+                <image src="http://static.bjpengkai.cn/gamePK/shop/card30.JPG" />
+                <view class="name">30元移动卡</view>
+                <view class="value">7500</view>
+            </view>
+
+            <view class="scroll_item" catchtap='duihuan' data-num="5000">
+                <image src="http://static.bjpengkai.cn/gamePK/shop/fan.JPG" />
+                <view class="name">USB风扇</view>
+                <view class="value">5000</view>
+            </view>
+            <view class="scroll_item" catchtap='duihuan' data-num="4000">
+                <image src="http://static.bjpengkai.cn/gamePK/shop/pig.JPG" />
+                <view class="name">佩奇手表</view>
+                <view class="value">4000</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+</view>
+
+<template name="tips">
+<view class = 'mengban'></view>
+        <view id="tips" catchtap="openTips" data-open="close">
+            <view class="tips" data-open="open" catchtap="openTips">
+                <view class="now">
+                    立即兑换
+                </view>
+                <view class="custom">
+                    提现联系客服
+                </view>
+                <view class="wx">
+                    <text selectable='true'>+VX：beyo1002</text>
+                    <!-- <view>长按可进行复制</view> -->
+                </view>
+            </view>
+        </view>
+    </template>
+
+  <template is="tips" wx:if="{{tips}}"></template>

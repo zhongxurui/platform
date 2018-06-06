@@ -1,0 +1,202 @@
+<import src='../temp/temp' />
+<scroll-view class='body' wx:if="{{show == 'true'}}" scroll-y enable-back-to-top>
+
+  <view class='gametitle'>
+    <view class='titlebanner'></view>
+    <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/index/tipsrule.png' catchtap='showaward' wx:if="{{id}}"></image>
+  </view>
+
+  <view class="today_tuijian">
+    <view class='tuijian_banner'>
+      <image src='{{background}}'></image>
+    </view>
+    <view class='stargame' wx:if="{{id}}">
+      <button class='btn' open-type='getUserInfo' bindgetuserinfo="getUserinfo"></button>
+    </view>
+    <view class='stargame' wx:else style='background-image: url("http://static.bjpengkai.cn/gamePK/setmore.png");' catchtap='showQR'>
+    </view>
+    <view class='invitfriend' wx:if="{{id}}">
+      <text>邀请好友一起挑战</text>
+      <button open-type='share' class='btn'></button>
+    </view>
+    <view class='invitfriend' wx:else catchtap='gotomoregame'>
+      <text>赚更多</text>
+    </view>
+    <view class='tuijianimage' wx:if="{{id}}"></view>
+  </view>
+
+  <view class='uesrInfo'>
+    <view class='userInfo_header'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='userInfo_info'>
+      <open-data type="userNickName" class="userInfo_name"></open-data>
+      <text class='paiming'>今日最高得分：{{playerScore}}</text>
+      <text class='paiming'>当前排名：{{personalrank}}</text>
+    </view>
+
+    <view class='gamebtn'>
+      <view class='tips' style='margin-left: 0rpx; width: 220rpx;'>
+        <image src='http://static.bjpengkai.cn/gamePK/index/gold.png'></image>
+        <text style='font-size: 28rpx'>{{integral}}</text>
+        <image src='http://static.bjpengkai.cn/gamePK/jifen/add.png' catchtap='gotomoregame'></image>
+      </view>
+      <view class='duihuan'>
+        <text>兑换礼物</text>
+        <form bindsubmit='formSubmit' report-submit>
+          <button plain class='btn' form-type='submit' data-type="gotohapply"></button>
+        </form>
+      </view>
+    </view>
+  </view>
+  <view class="marquee_container">
+    <view class="marquee_text">
+      <text decode="true">{{marquee.text}}</text>
+    </view>
+  </view>
+  <view class='listtop'>
+    <view style='width: 300rpx;'>
+      <text>今日排行</text>
+    </view>
+    <view style='width: 200rpx; text-align: right;'>
+      <text>得分</text>
+    </view>
+    <view style='width: 280rpx;   display: flex;align-items: center;justify-content: center; margin-left:30rpx;'>
+      <text style='margin-left: 40rpx;'>预计获得金币</text>
+      <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/index/tipsrule.png' catchtap='showaward' wx:if="{{id}}" style='  width: 35rpx; height: 35rpx;margin-left: 5rpx;'></image>
+    </view>
+  </view>
+  <scroll-view class='listrank' scroll-y bindscrolltolower="RefreshList">
+
+    <view class='rank' wx:for="{{ranklist}}" wx:key>
+      <view class='ranknum'>{{index+ 1}}</view>
+      <view class='rankheader'>
+        <image src='{{item.portrait}}'></image>
+      </view>
+      <view class='rankname'>
+        <text>{{item.wxnicheng}}</text>
+      </view>
+      <view class='rankname' style=' width: 180rpx; text-align: left;'>
+        <text>{{item["game" + id + "Score"]}}</text>
+      </view>
+      <view class='rankname' style=' width: 140rpx; text-align: center;'>
+        <text>{{item["forecast_income" + id]}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</scroll-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class='body' wx:elif="{{show == 'false'}}">
+  <view class="today_tuijian showtest">
+    <view class='tuijian_banner'>
+      <image src='../../number.jpg'></image>
+    </view>
+    <view class='stargame' style='margin-top:50rpx' catchtap='gototest' />
+  </view>
+</view>
+
+
+<view class='body' wx:else>
+  <!-- <view class="today_tuijian showtest">
+    <view class='tuijian_banner'>
+      <image src='../../number.jpg'></image>
+    </view>
+    <view class='stargame' style='margin-top:50rpx' catchtap='gototest' />
+  </view> -->
+</view>
+
+
+
+
+
+<!-- <view class='daoliu_body'> -->
+
+ <view class='daoliu_body'  wx:if="{{showTips}}"> 
+  <view class='daoliu_bg' catchtap='hideTips'></view>
+  <view class='daoliu'>
+    <view class='tishi'>
+      <text>提示</text>
+    </view>
+    <view class='centent'>
+      <text>是否把猜你妹啊余额兑换成比游金币？</text>
+      <view class='centent_tips'>1元可兑换250金币</view>
+    </view>
+    <view class='duihuanButton'>兑换
+      <button class='btn' open-type='getUserInfo' bindgetuserinfo="getUserinfo_new"></button>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class='allrule' style=' visibility: {{hadshowaward}}'>
+  <view class='rulebg' catchtap='clearAward'></view>
+  <template is='award_item'></template>
+</view>
+
+<template is='share' wx:if="{{showshare}}"></template>

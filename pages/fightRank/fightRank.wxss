@@ -1,0 +1,116 @@
+/* pages/fightRank/fightRank.wxss */
+
+.body {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    background-color: #ededed;
+}
+
+page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.rankme {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 90%);
+    background-color: #e0f1f8;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .rankmeNum {
+    width: 100rpx;
+    height: 110rpx;
+    position: relative;
+}
+
+ .rankmeNum text {
+    line-height: 110rpx;
+    font-size: 40rpx;
+    text-align: center;
+    display: block;
+    color: #469be4;
+}
+
+ .rankheader {
+    width: 80rpx;
+    height: 80rpx;
+    position: relative;
+    margin-left: 10rpx;
+    border: 3rpx solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #469be4;
+}
+ .rankheader  image {
+     width: 100%;
+     height: 100%;
+     position: relative;display: block;
+     border-radius: 50%;
+ }
+
+.rankInfo {
+    width: 300rpx;
+    height: 100rpx;
+    position: relative;
+}
+ .rankInfo text {
+    display: block;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+   color: #469be4;
+}
+
+ .rankget {
+    width: 200rpx;
+    height: 100rpx;
+    position: relative;
+}
+
+ .rankget text {
+    display: block;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #e45110;
+}
+
+ .rankInfo  .rankInfo_name {
+    line-height: 100rpx;
+    font-size: 30rpx;
+    width: 300rpx;
+    text-align: center;
+    display: block;
+    color: #469be4;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rankuserinfo {
+    width: 100%;
+    height: 100rpx;
+    position: relative;
+    margin-top: 5rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showme {
+    font-size: 30rpx;
+     color: #e45110;
+}

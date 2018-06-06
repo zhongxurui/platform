@@ -1,0 +1,15 @@
+<view class="body">
+    <text class="numstyle">数字比大小，比比谁厉害</text>
+    <text class="numstyle" style='font-size: 55rpx'>请点击选出下方较大的数字</text>
+
+    <view class='showChoose'>
+
+        <view catchtap='getQuestion' data-number="{{number1}}" data-index="1">
+            <text>{{number1}}</text>
+        </view>
+        <view style='width: 80rpx; border: none'></view>
+        <view catchtap='getQuestion' data-number="{{number2}}" data-index="2">
+            <text>{{number2}}</text>
+        </view>
+    </view>
+</view>

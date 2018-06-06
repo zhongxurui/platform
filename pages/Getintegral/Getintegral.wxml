@@ -1,0 +1,215 @@
+<view class='Getindex'>
+    <view class='shopTop'>
+        <view class='tips' style='margin-left: 0rpx; width: 220rpx;'>
+            <image src='http://static.bjpengkai.cn/gamePK/index/gold.png'></image>
+            <text style='font-size: 28rpx'>{{integral}}</text>
+            <image src='http://static.bjpengkai.cn/gamePK/jifen/add.png' catchtap='gotomoregame'></image>
+        </view>
+        <view style='width: 250rpx'></view>
+        <view class='tips' catchtap='gotofight'>
+            <image src='http://static.bjpengkai.cn/gamePK/jifen/bei.png'></image>
+            <text style='font-size: 27rpx;width：120rpx'>战绩榜</text>
+            <form bindsubmit='formSubmit' report-submit>
+                <button plain class='btn' form-type='gotofight'></button>
+            </form>
+        </view>
+    </view>
+    <scroll-view class='boby' scroll-y scroll-into-view="{{toView}}">
+        <view class='playtitle' id="top">
+            <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/jifen/gameget.png'></image>
+        </view>
+
+
+        <!-- <view class='tuijiantitle'>
+            <text class='tuijiantitle_text'>宇宙大咖lalal</text>
+            <text class='tuijiantitle_text' style='margin-left:15rpx;'>奖池：<text style = 'color: #e62424'>5000</text>金币</text>
+            <view style='background: #85b0e1;'>
+                <text>排行榜</text>
+            </view>
+            <view>
+                <text>进入</text>
+            </view>
+        </view> -->
+
+        <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" class='swiper' previous-margin="50rpx" next-margin="50rpx">
+            <block wx:for="{{choiceGame}}" wx:key>
+                <swiper-item class="swimge">
+                    <view class="slide-image">
+                        <view class='slide_i_new'>
+                            <view class='tuijiantitle'>
+                                <text class='tuijiantitle_text' style='text-align: left;width:190rpx;'>{{item.name}}</text>
+                                <text class='tuijiantitle_text'>奖池：<text style = 'color: #e62424'>{{item.integral}}</text>金币</text>
+                                <view style='background: #85b0e1;' catchtap='gotorank' data-item="{{item}}">
+                                    <text>排行榜</text>
+                                </view>
+                                <view catchtap='gotogame' data-item="{{item}}">
+                                    <text>进入</text>
+                                </view>
+                            </view>
+                            <image src="{{item.logo}}" catchtap='gotogame' data-item="{{item}}" />
+                        </view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+
+        <view class='btn_active'>
+            <view class='active_item'>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/jifen/signin_new.png'></image>
+                <form bindsubmit='formSubmit' report-submit>
+                    <button plain class='btn' form-type='submit' data-type="gotosign"></button>
+                </form>
+            </view>
+            <!-- <view class='active_item'>
+                <image src='http://static.bjpengkai.cn/gamePK/jifen/guaguaka.png'></image>
+                <text>刮刮卡</text>
+            </view>  -->
+            <view style='width:20rpx;'></view>
+            <view class='active_item' style=' border-right:none'>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/jifen/moregame_new.png'></image>
+                <form bindsubmit='formSubmit' report-submit>
+                    <button plain class='btn' form-type='submit' data-type="gotomoregame"></button>
+                </form>
+            </view>
+        </view>
+        <view class='hezuoGame' wx:if="{{showmimin}}">
+            <!-- <image src='{{showmimin.logo}}' catchtap='gotohezuo' data-appId='{{showmimin.appId}}'></image> -->
+            <image src='{{showmimin.logo}}'></image>
+            <navigator class="gowxMin" target="miniProgram" open-type="navigate" app-id="{{showmimin.appId}}" version="release"></navigator>
+        </view>
+        <view style='height:20rpx; background-color: #ededed'></view>
+        <view class='playtitle' id="goldduihuan">
+            <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/jifen/jinbiduihuan_new.png'></image>
+        </view>
+        <view class="scroll">
+            <view class="allItem">
+                <!-- catchtap='duihuangood' data-item="{{item}}" -->
+                <view class="scroll_item" wx:for="{{goods}}" wx:key>
+
+                    <image src="{{item.img}}" />
+                    <image src='../../shoukong.png' class='shoukong' wx:if="{{item.sellOut == 1}}"></image>
+                    <view class="name">{{item.name}}</view>
+                    <view class="value">{{item.gold}}金币</view>
+                    <!-- <view class='goods_z'></view> -->
+                    <!-- <view class = 'btn' style = 'background: black; opacity: 1' wx:if = "{{index==0}}"></view> -->
+                    <form bindsubmit='formSubmit' report-submit>
+                        <button plain class='btn' form-type='submit' data-type="duihuangood" data-item="{{item}}"></button>
+                    </form>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+
+
+
+
+
+
+<view class='signBody' wx:if="{{showsign}}" animation="{{showsignanimation}}">
+    <view class='bg' catchtap='hidesign'></view>
+    <view class='sign'>
+        <text class='title'>每日签到奖励</text>
+        <text class='tips' wx:if="{{sign ==0}}">今日第{{signNum +1}}天，连续签到金币更多</text>
+        <text class='tips' wx:else>今日第{{signNum}}天，连续签到金币更多</text>
+        <view class='signInfo'>
+            <view class='signItem'>
+                <text class="item_num">第1天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/1.png' />
+                <view class='goldnum'>
+                    <text>18</text>
+                </view>
+                <block wx:if="{{signNum >0}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 0;'></image>
+                </block>
+            </view>
+            <view class='signItem'>
+                <text class="item_num">第2天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/2.png' />
+                <view class='goldnum'>
+                    <text>58</text>
+                </view>
+                <block wx:if="{{signNum >1}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 0;'></image>
+                </block>
+            </view>
+            <view class='signItem'>
+                <text class="item_num">第3天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/3.png' style='margin-top: -25rpx;' />
+                <view class='goldnum'>
+                    <text>188</text>
+                </view>
+                <block wx:if="{{signNum >2}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 0;'></image>
+                </block>
+            </view>
+            <view class='signItem'>
+                <text class="item_num">第4天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/4.png' style='margin-top: -25rpx;' />
+                <view class='goldnum'>
+                    <text>288</text>
+                </view>
+                <block wx:if="{{signNum >3}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 0;'></image>
+                </block>
+            </view>
+            <view class='signItem'>
+                <text class="item_num">第5天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/5.png' style='margin-top: -25rpx;' />
+                <view class='goldnum'>
+                    <text>388</text>
+                </view>
+                <block wx:if="{{signNum >4}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 0;'></image>
+                </block>
+            </view>
+            <view class='signItem'>
+                <text class="item_num">第6天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/6.png' style='margin-top: -25rpx;' />
+                <view class='goldnum'>
+                    <text>588</text>
+                </view>
+                <block wx:if="{{signNum >5}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 0;'></image>
+                </block>
+            </view>
+
+            <view class='signItem_7'>
+                <text class="item_num">第7天</text>
+                <image src='https://static-1255927411.cos.ap-beijing.myqcloud.com/gamePK/signnum/7.png' style='margin-top: -25rpx;' />
+                <view class='goldnum'>
+                    <text>1088</text>
+                </view>
+                <block wx:if="{{signNum >6}}">
+                    <view class='bg' style=' border-radius: 15rpx;'></view>
+                    <image src='../../duihao.png' style='  position: absolute; width: 61rpx; height: 47rpx; top: 20rpx; right: 10rpx;'></image>
+                </block>
+            </view>
+        </view>
+        <text class='signbtn' wx:if="{{sign == 0}}" catchtap='signAward'>签到</text>
+        <text class='signbtn' wx:else style=' background-color: rgba(0,0,0,0.3)'>已签到</text>
+    </view>
+</view>
+
+<view class='addkefu' wx:if="{{showkefu}}">
+    <view class='bg' catchtap='hidekefu'></view>
+    <view class='kefuInfo'>
+        <view class="now">
+            立即兑换
+        </view>
+        <text class='title'>兑换联系客服</text>
+        <view class="wx">
+            <text selectable='true'>+VX：beyo1002</text>
+            <view>长按可进行复制</view>
+        </view>
+    </view>
+</view>
+
+<import src='../temp/temp' />
+<template is='share' wx:if="{{showshare}}"></template>

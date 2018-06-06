@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/Getintegral/Getintegral",
+        "pages/temp/temp",
+        "pages/moregame/moregame",
+        "pages/h5game/h5game",
+        "pages/shop/shop",
+        "pages/gameRank/gameRank",
+        "pages/fightRank/fightRank",
+        "pages/userInfo/userInfo",
+        "pages/test/test"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "比游",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#5876f1"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "image/index.png",
+                "selectedIconPath": "image/indexselect.png",
+                "text": "每日挑战"
+            },
+            {
+                "pagePath": "pages/Getintegral/Getintegral",
+                "iconPath": "image/shop.png",
+                "selectedIconPath": "image/shopselcet.png",
+                "text": "金币乐园"
+            },
+            {
+                "pagePath": "pages/userInfo/userInfo",
+                "iconPath": "image/actor.png",
+                "selectedIconPath": "image/actorselect.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

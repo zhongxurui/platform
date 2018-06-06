@@ -1,0 +1,73 @@
+<template name="bottom">
+    <view class='bottom'>
+        <!-- <view class='bottom_bg'></view> -->
+        <view class='bottom_btn'>
+            <view class='bottm_index'>
+                <view>
+                    <image src="http://static.bjpengkai.cn/gamePK/index/index.png"></image>
+                    <text>首页</text>
+                    <form bindsubmit='formSubmit' report-submit>
+                        <button plain class='btn' form-type='submit' data-type="goindex"></button>
+                    </form>
+                </view>
+            </view>
+
+            <view class='bottm_index'>
+                <view style=' position: relative;' catchtap='clickGet'>
+                    <!-- <form bindsubmit='formSubmit' report-submit>
+                        <button plain class='btn' style = 'opacity: 1' form-type='submit' data-type="a"></button>
+                    </form>  -->
+                    <image src="http://static.bjpengkai.cn/gamePK/index/zhuanjifen.png"></image>
+                    <text>赚积分</text>
+
+                </view>
+            </view>
+
+            <view class='bottm_index'>
+                <view>
+                    <image src="http://static.bjpengkai.cn/gamePK/index/shop.png"></image>
+                    <text>积分商城</text>
+                    <form bindsubmit='formSubmit' report-submit>
+                        <button plain class='btn' form-type='submit' data-type="gotoshop"></button>
+                    </form>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="award_item">
+    <scroll-view scroll-y class="award_item"> 
+        <!-- <view class = 'rulebtn' catchtap = 'clearAward'>
+            <text>X</text>
+        </view> -->
+        <text class = 'rule' decode="true">
+           <text> 平台规则说明：</text>
+     &nbsp;1.成绩的结算和金币派发
+       &nbsp;&nbsp; 系统每天零点统计全网玩家在24小时内的最终成绩，并根据玩家的全网排名和最高得分派发金币奖励。
+   \n &nbsp;2.每日挑战赛奖励计算方法
+        &nbsp;&nbsp;上榜者每日金币奖励=（你的今日最高得分/当日排行榜前200名所有用户的今日最高分之和）×当日奖池金币总数。
+    \n &nbsp;3.兑换奖品
+       &nbsp;&nbsp;金币可用来在商城兑换奖品，所兑换商品无需任何额外费用，且全场包邮。
+       \n &nbsp; 4.排行榜更新 
+ &nbsp;&nbsp;榜单每5分钟更新一次排名和预计获得金币数。
+        </text>
+    </scroll-view>
+</template>
+
+<template name = "share">
+   <view class = 'share_tmp'>
+    <view class = 'share_tmp_info'>
+            <text >获得更多挑战机会</text>
+            <text style = 'top: 100rpx;'>邀请好友，一起来挑战</text>
+            <view class = 'btn_tmp'>
+                <view catchtap = 'hideshare'>
+                     取消
+                </view>
+                 <view style = 'color: rgb(0, 197, 0)'>
+                 去邀请
+                  <button class = 'btn' open-type = 'share' data-id = "1"></button>
+                 </view>
+            </view>
+    </view>
+</view>
+</template>
